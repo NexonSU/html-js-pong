@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pong</title>
+		<link rel="stylesheet" href="/css/main.css">
+		<script src="/js/main.js"></script>
+		<script id="js"></script>
+	</head>
+	<body style="display: none;">
+		<div class="menu" style="display: none;">
+			<div class="title">PONG!</div>
+			<div class="buttons">
+				<button onclick="change_layer('singleplayer')" title="Play alone with stupid AI">SINGLEPLAYER</button>
+				<button onclick="change_layer('multiplayer-tdm')" title="Play with someone">MULTIPLAYER</button>
+				<button onclick="change_layer('options')">OPTIONS</button>
+			</div>
+		</div>
+		<div class="options" style="display: none;">
+			<button onclick="change_layer('menu')">EXIT</button>
+			<table>
+				<tr>
+					<td>AUDIO VOLUME</td>
+					<td>
+						<input type="range" name="volume" min="0" max="1" value="0.2" step="0.01" onchange="localStorage.volume = this.value;sound_paddle.volume = this.value;sound_wall.volume = this.value;sound_score.volume = this.value;">
+					</td>
+				</tr>
+				<tr>
+					<td>SINGLEPLAYER BALL SPEED</td>
+					<td>
+						<input type="range" name="ball_speed" min="2" max="50" value="12" step="1" onchange="localStorage.ball_speed = this.value;">
+					</td>
+				</tr>
+				<tr>
+					<td>SINGLEPLAYER DIFFICULTY</td>
+					<td>
+						<select name="difficulty" onchange="localStorage.difficulty = this.options[this.selectedIndex].value;">
+							<option value="26">EASY</option>
+							<option value="20" selected="selected">MEDIUM</option>
+							<option value="14">HARD</option>
+							<option value="8">EXPERT</option>
+							<option value="2">CHEATER</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>MULTIPLAYER USERNAME</td>
+					<td>
+						<input name="username" type="text" value="PLAYER" onchange="localStorage.username = this.value;">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="singleplayer" style="display: none;">
+			<button onclick="change_layer('menu')">EXIT</button>
+			<div class="input"></div>
+			<div class="wrap">
+				<div class="sepline"></div>
+				<div class="leftpoints">0</div>
+				<div class="rightpoints">0</div>
+				<div class="leftpaddle"></div>
+				<div class="rightpaddle"></div>
+				<div class="dot"></div>
+				<div class="countdown">0</div>
+			</div>
+		</div>
+		<div class="multiplayer" style="display: none;">
+			<button onclick="change_layer('menu');">EXIT</button>
+			<div class="title">MULTIPLAYER!</div>
+			<div class="buttons">
+				<button class="multiplayer-tdm" onclick="change_layer(this.className)" title="Team versus team">TEAM DEATHMATCH</button>
+				<!--<button class="multiplayer-pvp" onclick="change_layer(this.className)" title="Player versus player">PVP</button>-->
+			</div>
+		</div>
+		<div class="multiplayer-tdm" style="display: none;">
+			<button onclick="window.clearInterval(sending_loop);change_layer('menu');">EXIT</button>
+			<div class="input"></div>
+			<div class="wrap">
+				<div class="sepline"></div>
+				<div class="leftpoints">0</div>
+				<div class="rightpoints">0</div>
+				<div class="dot"></div>
+				<div class="countdown">0</div>
+			</div>
+		</div>
+	</body>
+</html>

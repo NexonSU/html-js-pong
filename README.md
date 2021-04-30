@@ -7,8 +7,8 @@ Simple pong game on HTML and JS
 
 ## Additional installation for multiplayer
 1. Install NodeJS to your webserver.
-2. Setup your frontend webserver for serving websocket requests.
-3. Change websocket URL in js/multiplayer-tdm.js.
-4. Change port in js/server.js, if needed.
-5. Start server:
-`node js/server.js`
+2. Install websocket module: `npm install ws`
+3. Setup your frontend webserver for serving websocket requests.
+4. Change websocket URL in js/multiplayer-tdm.js.
+5. Change port in js/server.js, if needed.
+6. Start server: `node js/server.js`

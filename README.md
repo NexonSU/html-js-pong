@@ -1,5 +1,6 @@
 # html-js-pong
-Simple pong game on HTML and JS
+Simple pong game on HTML and JS.
+Demo: https://pong.nexon.su/
 
 ## Only singleplayer installation
 1. Upload files to your webserver.

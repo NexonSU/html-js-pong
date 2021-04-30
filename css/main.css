@@ -1,0 +1,361 @@
+@font-face {
+	font-family: 'Chava-Regular';
+	src: url('/css/Chava-Regular.ttf') format('truetype'), url('/css/Chava-Regular.woff') format('woff'), url('/css/Chava-Regular.svg#Chava-Regular') format('svg'), url('/css/Chava-Regular.eot') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Chava-Regular', sans-serif;
+}
+
+button {
+	color: white;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	background: black;
+	overflow: hidden; 
+	color: white;
+	touch-action: none;
+}
+
+.menu {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 20vw;
+}
+
+.menu button {
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	margin: 2vw auto;
+	font-size: 2vw;
+}
+
+.menu button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.options {
+	height: 100%;
+	font-size: 2vw;
+}
+
+.options input, select {
+    font-size: 2vw;
+    vertical-align: text-bottom;
+    min-height: 2vw;
+    width: 50%;
+}
+
+.options table {
+	height: 100%;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.options table td {
+	padding: 1vw;
+	max-width: 1vw;
+}
+
+.options table td:first-child {
+	text-align: right;
+}
+
+.options table td:last-child {
+	text-align: left;
+}
+
+.options > button {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 3;
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	font-size: 1vw;
+}
+
+.options > button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.singleplayer {
+	display: block;
+}
+
+.singleplayer .wrap {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.singleplayer .sepline {
+	background-color: rgb(25, 25, 25);
+	position: absolute;
+	height: 100%;
+	width: 1%;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.singleplayer .leftpaddle, .rightpaddle {
+	background: rgb(200, 200, 200);
+	position: absolute;
+	top: 40%;
+	width: 2%;
+	height: 20%;
+}
+
+.singleplayer .leftpaddle {
+	left: 1%;
+}
+
+.singleplayer .rightpaddle {
+	right: 1%;
+}
+
+.singleplayer .leftpoints {
+	position: absolute;
+	top: 1%;
+	right: 52%;
+	width: 10%;
+	text-align: right;
+	font-size: 5vw;
+}
+
+.singleplayer .rightpoints {
+	position: absolute;
+	top: 1%;
+	left: 51.4%;
+	width: 10%;
+	text-align: left;
+	font-size: 5vw;
+}
+
+.singleplayer .dot {
+	background: rgb(200, 200, 200);
+	position: absolute;
+	bottom: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+.singleplayer .input {
+	background: transparent;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.singleplayer .countdown {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 20vw;
+	width: 97.5%;
+	text-align: center;
+	opacity: 0;
+}
+
+.singleplayer > button {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 3;
+	font-family: 'Chava-Regular';
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	font-size: 1vw;
+}
+
+.singleplayer > button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.multiplayer {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 10vw;
+}
+
+.multiplayer .buttons button {
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	margin: 2vw auto;
+	font-size: 2vw;
+}
+
+.multiplayer .buttons button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.multiplayer > button {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 3;
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	font-size: 1vw;
+}
+
+.multiplayer > button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+.multiplayer-tdm {
+	display: block;
+}
+
+.multiplayer-tdm .wrap {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.multiplayer-tdm .sepline {
+	background-color: rgb(25, 25, 25);
+	position: absolute;
+	height: 100%;
+	width: 1%;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.multiplayer-tdm .leftpaddle, .rightpaddle {
+	background: rgb(200, 200, 200);
+	position: absolute;
+	top: 40%;
+	width: 2%;
+	height: 20%;
+}
+
+.multiplayer-tdm .leftpaddle {
+	text-align: left;
+	left: 1%;
+}
+
+.multiplayer-tdm .rightpaddle {
+	text-align: right;
+	right: 1%;
+}
+
+.multiplayer-tdm .leftpaddle > p {
+	float: left;
+	margin-left: 110%;
+}
+
+.multiplayer-tdm .rightpaddle > p {
+	float: right;
+	margin-right: 120%;
+}
+
+.multiplayer-tdm .leftpoints {
+	position: absolute;
+	top: 1%;
+	right: 52%;
+	width: 10%;
+	text-align: right;
+	font-size: 5vw;
+}
+
+.multiplayer-tdm .rightpoints {
+	position: absolute;
+	top: 1%;
+	left: 51.4%;
+	width: 10%;
+	text-align: left;
+	font-size: 5vw;
+}
+
+.multiplayer-tdm .dot {
+	background: rgb(200, 200, 200);
+	position: absolute;
+	bottom: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+.multiplayer-tdm .input {
+	background: transparent;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.multiplayer-tdm .countdown {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 10vw;
+	width: 97.5%;
+	text-align: center;
+	opacity: 0;
+}
+
+.multiplayer-tdm > button {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 3;
+	font-family: 'Chava-Regular';
+	background: black;
+	border: 2px solid rgb(200, 200, 200);
+	padding: 10px;
+	display: block;
+	font-size: 1vw;
+}
+
+.multiplayer-tdm > button:hover {
+	cursor: pointer;
+	font-weight: bold;
+}

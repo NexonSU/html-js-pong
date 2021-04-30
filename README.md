@@ -3,7 +3,7 @@ Simple pong game on HTML and JS
 
 ## Only singleplayer installation
 1. Upload files to your webserver.
-2. Fix .js\.css\.mp3 links, if needed.
+2. Fix .js/.css/.mp3 links, if needed.
 
 ## Additional installation for multiplayer
 1. Install NodeJS to your webserver.
